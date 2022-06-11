@@ -1,39 +1,8 @@
 console.log("hello mundo")
 
 $(document).ready(function(){
-
-   /** 
-    $('#numero1').on('input', function(){
-        console.log($(this).val());
-        suma();
-    });
-    $('#numero2').on('input', function(){
-        console.log($(this).val());
-        suma();
-    });
-    $('#numero3').on('input', function(){
-        console.log($(this).val());
-        suma();
-    });
-
-    function suma (){
-        var suma = 0;
-
-        $('.monto').each(function(){
-            
-            if (isNaN(parseFloat($(this).val()))) {
-
-              suma += 0;
-          
-              } else {
-        
-            suma += parseFloat($(this).val());
-                $('#subtotal').val(suma);
-            }
-        });
-    }
-   */
     
+   //función de suma mediante cuando el evento input se detecta
     $('.monto').keyup(function() {
         var importe_total = 0
           $(".monto").each(
@@ -45,8 +14,9 @@ $(document).ready(function(){
             }
           );
          $("#subtotal").val(importe_total);
-         
+
     });
 
     
+
 });
