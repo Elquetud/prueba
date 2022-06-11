@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Prueba Técnica</title>
+    
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"
       rel="stylesheet"
@@ -16,33 +17,102 @@
       integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
       crossorigin="anonymous"
     ></script>
-  </head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet"/>
+    
+    <style>
+      .container{
+        width: 200px;
+        height: 200px;
+      }
+      .color{
+        background-color: red;
+      }
+      .abs-center {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      
+      }  
+      #space{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      
+   </style>
+
+   </head>
 
   <body>
-   <h1>Suma de Valores</h1>
-    <form action="">
+   <div >
+   <h1 class="m-5">Suma de Valores</h1>
       
-      <h3>Numero 1:</h3>
+   <form action="">
+     <div class="m-5">
+      <h3 >Numero 1:</h3>
       <input type="number" name="numero1"  id="numero1" class="monto" />
       <h3>Numero 2:</h3>
       <input type="number" name="numero2"  id="numero2" class="monto"/>
       <h3>Numero 3:</h3>
       <input type="number" name="numero3" id="numero3"  class="monto"/>
-    
-   </form>
-
-    <h1></h1>
-
-    <div id="resultado4">
-      <input id="subtotal" type="text" disabled  /> TOTAL
     </div>
 
-    <hr />
-    <h1>Validación de email</h1>
+   </form>
+      
+   </div>
+   
+   <h1></h1>
 
+    <div id="resultado4" class="abs-center">
+      <input id="subtotal" type="text" disabled  /> <h3 class="m-4 text-primary"> TOTAL</h3>
+    </div>
+
+   
+    <h1 class="m-5" >Validación de email</h1>
+    <div class="panel-body">
+      <form class="form-horizontal m-t-20 toggle-disabled" onsubmit="validacionLogin(); return false;" method="post" >
+    
+        <div class="form-group">
+          <div class="col-xs-12">
+            <!--<label class="control-label">E-mail</label>-->
+            <input class="form-control input-lg m-3" type="email" id="email" name="email" data-validation="email"  placeholder="Introduce tu correo electronico">
+            <div id="xmail" class="hide"><h6 class="text-danger">Ingresa un email valido</h6></div>
+          </div>
+        </div>
+
+      
+    
+      </form> 
+    </div>
+    
+    <div class="m-5" >
+    <h1>Div de colores</h1>
+
+    
+    <button type="button" id="rojo" class="mt-4">Color Rojo</button>
+    <button type="button" id="azul" >Color Azul</button>
+    
+    </div>
+    
+    <div class="container abs-center color" id="div">
+
+    </div >
+    <br>
+    <hr>  
+    <div class="m-5">
+    <h1 >Longitud de texto</h1>
+    <input type="text" id="longitud">
+    </div>
+
+      <h4 id="open" class="m-5"></h4>
+
+      <div class="container"></div>
 
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="main.js"></script>
+  
   </body>
 </html>
